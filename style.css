@@ -247,4 +247,16 @@
 .portfolio-body .portfolio-container .col .grid-row .toolkit-col h3 {
   text-transform: uppercase;
 }
+
+.portfolio-body .pc-screen {
+  margin-top: 100px;
+  width: 350px;
+  border-radius: 10px;
+  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+          transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+}
+
+.portfolio-body #lottie {
+  width: 350px;
+}
 /*# sourceMappingURL=style.css.map */
