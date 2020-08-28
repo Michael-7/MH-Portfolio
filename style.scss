@@ -175,6 +175,38 @@ html{
 	.landing-grid{
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .6fr;
+		max-width: 100vw;
+
+		@media only screen and (max-width: 500px) {
+			grid-template-rows: initial;
+		}
+		
+		#lottie-1{
+			position: absolute;
+			top: -150px;
+			right: -725px;
+			width: 1450px;
+			transform: scaleX(-1)
+		}
+
+		#lottie-mob{
+			position: relative;
+			width: 275vw;
+			margin: -35vw 0 0 -38vw;
+			transform: scaleX(-1);
+		}
+
+		h1{
+			@media only screen and (max-width: 500px) {
+				max-width: calc(100vw - 80px);
+				margin-top: -10vw;
+				margin-left: 40px;
+			}
+
+			@media only screen and (max-width: 370px) {
+				font-size: 2.5rem;
+			}
+		}
 	}
 
 	.landing-txt{
@@ -352,14 +384,6 @@ html{
 		width: 350px;
 		border-radius: 10px;
 		transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
-	}
-
-	#lottie-1{
-		position: absolute;
-		top: -150px;
-		right: -725px;
-		width: 1450px;
-		transform: scaleX(-1)
 	}
 
 }
