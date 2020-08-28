@@ -1,9 +1,15 @@
 $background-color: #FDFDFD;
 $text-color: #2C3E50;
-$accent-color: #3498DB;
+$accent-color: #364CEA;
  
 $primary-font: 'Source Sans Pro', sans-serif;
 $secondary-font: 'Inconsolata', monospace;
+
+html{
+	@media only screen and (max-width: 768px) {
+		font-size: 11px;
+	}
+}
 
 .portfolio-body{
 
@@ -34,6 +40,11 @@ $secondary-font: 'Inconsolata', monospace;
 		font-weight: 700;
 		text-transform: uppercase;
 		text-align: right;
+
+		@media only screen and (max-width: 768px) {
+			text-align: left;
+			margin-bottom: 50px;
+		}
 	}
 
 	h3{
@@ -94,15 +105,15 @@ $secondary-font: 'Inconsolata', monospace;
 	// SPACING
 
 	.mt-big{
-		margin-top: 70px;
+		margin-top: 70px !important;
 	}
 
 	.mt-med{
-		margin-top: 50px;
+		margin-top: 50px !important;
 	}
 
 	.mt-sml{
-		margin-top: 20px;
+		margin-top: 20px !important;
 	}
 
 	.mt-xsml{
@@ -110,6 +121,34 @@ $secondary-font: 'Inconsolata', monospace;
 	}
 
 	// LAYOUT
+
+	.show-mob{
+		display: none;
+	}
+
+	.show-tablet{
+		display: none;
+	}
+
+	@media only screen and (max-width: 500px) {
+		.show-mob{
+			display: block;
+		}
+
+		.hide-mob{
+			display: none;
+		}
+	}
+
+	@media only screen and (max-width: 768px) {
+		.show-tablet{
+			display: block;
+		}
+
+		.hide-tablet{
+			display: none;
+		}
+	}
 
 	.page-container{
 		width: 100%;
@@ -120,6 +159,10 @@ $secondary-font: 'Inconsolata', monospace;
 		.col{
 			width: 1000px;
 			margin: 0px auto 0px auto;
+
+			@media only screen and (max-width: 1000px) {
+				width: 100vw
+			}
 
 			.grid{
 				display: grid;
@@ -205,21 +248,40 @@ $secondary-font: 'Inconsolata', monospace;
 		width: 100%;
 		height: 100%;
 		position: relative;
+		overflow: hidden;
 
 		.col{
 			width: 1000px;
 			margin: 0px auto 0px auto;
+
+			@media only screen and (max-width: 1000px) {
+				width: 100vw
+			}
 
 			.grid-row{
 				display: grid;
 				grid-template-columns: 1fr 2fr;
 				grid-column-gap: 50px;
 				height: 100%;
+				position: relative;
+
+				@media only screen and (max-width: 1080px) {
+					margin: 0 40px 0 40px;
+				}
+
+				@media only screen and (max-width: 768px) {
+					grid-template-columns: 1fr;
+					grid-column-gap: 50px;
+				}
 
 				.item-list{
 					display: flex;
 					flex-direction: column;
 					margin-top: 4px;
+
+					@media only screen and (max-width: 768px) {
+						margin-left: 60px;
+					}
 
 					.item{
 						display: flex;
@@ -228,6 +290,15 @@ $secondary-font: 'Inconsolata', monospace;
 
 						.item-right{
 							max-width: 65%;
+							@media only screen and (max-width: 500px) {
+								max-width: 100%;
+							}
+						}
+
+						.item-left{
+							@media only screen and (max-width: 500px) {
+								display: none;
+							}
 						}
 					}
 				}
@@ -237,6 +308,10 @@ $secondary-font: 'Inconsolata', monospace;
 					grid-template-columns: 1fr 1fr 2fr;
 					grid-column-gap: 10px;
 
+					@media only screen and (max-width: 768px) {
+						margin-left: 60px;
+					}
+
 					.tools-col{
 						margin-left: 10px;
 					}
@@ -244,6 +319,29 @@ $secondary-font: 'Inconsolata', monospace;
 					h3{
 						text-transform: uppercase;
 					}
+				}
+
+				.app-mockup{
+					position: absolute;
+					margin-top: 70px;
+					width: 45%;
+					left: -100px;
+
+					@media only screen and (max-width: 1200px) {
+						width: 40%;
+						left: -60px;
+					}
+
+					@media only screen and (max-width: 1020px) {
+						width: 35%;
+						left: 0px;
+					}
+				}
+
+				.app-mockup-tablet{
+					width: 170%;
+					margin-left: -45%;
+					margin-bottom: -70px;
 				}
 			}
 		}
@@ -256,9 +354,14 @@ $secondary-font: 'Inconsolata', monospace;
 		transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
 	}
 
-	#lottie{
-		width: 350px;
+	#lottie-1{
+		position: absolute;
+		top: -150px;
+		right: -725px;
+		width: 1450px;
+		transform: scaleX(-1)
 	}
+
 }
 
 

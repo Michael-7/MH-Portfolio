@@ -5,10 +5,10 @@
 // scrollTo();
 
 var animation = bodymovin.loadAnimation({
-	container: document.getElementById('lottie'), // Required
-	path: './resources/lottie-leg.json', // Required
+	container: document.getElementById('lottie-1'), // Required
+	path: './resources/char-jump-coffee.json', // Required
 	renderer: 'svg', // Required
-	loop: true, // Optional
+	loop: false, // Optional
 	autoplay: true, // Optional
 	name: "Hello World", // Name for future reference. Optional.
-  })
+});

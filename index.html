@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="font-size">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,14 +16,14 @@
 		<div class="grad-circle-landing"></div>
 		<div class="col">
 			<div class="grid landing-grid">
-				<!-- <h1 class="landing-txt">
+				<h1 class="landing-txt">
 					Hey, <br>
 					<br>
 					I'm <span class="bold accent">Michael Heemskerk</span>,<br>
 					a <span class="bold accent">front-end</span> software engineer<br>
 					with a passion for <span class="bold accent">motion design</span>.<br>
-				</h1> -->
-				<div id="lottie"></div>
+				</h1>
+				<div id="lottie-1"></div>
 				<div class="arrow-wrapper">
 					<div class="arrow"></div>
 				</div>
@@ -41,6 +41,7 @@
 					<div class="item">
 						<div class="item-right">
 							<h3>Havo</h3>
+							<p class="alt-txt show-mob mt-xsml">Aug 2010 - Jun 2015</p>
 							<p class="mt-xsml">Visser 't Hoofd Lyceum Leiden</p>
 						</div>
 						<div class="item-left">
@@ -50,6 +51,7 @@
 					<div class="item mt-med">
 						<div class="item-right">
 							<h3>Hbo ICT</h3>
+							<p class="alt-txt show-mob mt-xsml">Aug 2010 - Jun 2015</p>
 							<p class="mt-xsml">De Haagse Hogeschool</p>
 						</div>
 						<div class="item-left">
@@ -66,6 +68,7 @@
 					<div class="item">
 						<div class="item-right">
 							<h3>Centric</h3>
+							<p class="alt-txt show-mob mt-xsml">Aug 2017 - Dec 2018</p>
 							<p class="mt-xsml">Fullstack development</p>
 							<p class="mt-sml">
 								Started with a intership, after that I got hired. 
@@ -80,6 +83,7 @@
 					<div class="item mt-med">
 						<div class="item-right">
 							<h3>Code Orange</h3>
+							<p class="alt-txt show-mob mt-xsml">Jan 2019 - Present</p>
 							<p class="mt-xsml">Font-end development & design</p>
 							<p class="mt-sml">
 								I did my thesis on a project for Peugeot within this company. 
@@ -97,42 +101,50 @@
 
 			<!-- CASE STUDIE 1 -->
 			<div class="grid-row mt-big">
-				<h2>Case Studie 1</h2>
+				<div>
+					<h2>Case Studie 1</h2>
+					<img class="app-mockup hide-tablet" src="./resources/EBP-mockup.png" alt="Employee Benefit Program Mock-up">
+				</div>
 				<div class="item-list">
 					<div class="item">
 						<div class="item-right">
 							<h3>Employee Benefit Program</h3>
+							<p class="alt-txt show-mob mt-xsml">Front-end development</p>
 							<p class="mt-xsml">PSA (Peugeot, Citroen and DS)</p>
-							<p class="mt-sml">
-								For my thesis project I re-designed the front-end for a Employee Benefit Program (EBP).
-								 Everything except the design is done by me: analysis, software design, 
-								 building, implementing feedback and putting it live. 
-								 I studied the old AngularJS application, 
-								 mapped out both our API and the image API from PSA in Postman.<br>
-								 <br>
-								The thing I’m most proud in this project are the fact that 
-								after I realized this PSA wanted to implement this into all their other portals. 
-								The team working on that have essentially the same software design. 
-								It’s great to see that my design decisions are in line with the senior devs.
-							</p>
-
-							<a class="mt-sml">Download thesis</a>
-
-							<h3 class="mt-med">Highlights</h3>
-							<ul class="mt-xsml">
-								<li>Angular component library</li>
-								<li>Complex state management with redux</li>
-								<li>Implementation of RxJS</li>
-								<li>Consuming big internal and external API's</li>
-								<li>Authentication with JSON Web Tokens</li>
-								<li>Implementing a complex design for all devices</li>
-								<li>DevOps with Codeship & AWS</li>
-							</ul>
+							
 						</div>
 						<div class="item-left">
 							<p class="alt-txt">Front-end development</p>
 						</div>
 					</div>
+					<div>
+						<p class="mt-sml">
+							For my thesis project I re-designed the front-end for a Employee Benefit Program (EBP).
+							 Everything except the design is done by me: analysis, software design, 
+							 building, implementing feedback and putting it live. 
+							 I studied the old AngularJS application, 
+							 mapped out both our API and the image API from PSA in Postman.<br>
+							 <br>
+							The thing I’m most proud in this project are the fact that 
+							after I realized this PSA wanted to implement this into all their other portals. 
+							The team working on that have essentially the same software design. 
+							It’s great to see that my design decisions are in line with the senior devs.
+						</p>
+
+						<a class="mt-sml">Download thesis</a>
+
+						<h3 class="mt-med">Highlights</h3>
+						<ul class="mt-xsml">
+							<li>Angular component library</li>
+							<li>Complex state management with redux</li>
+							<li>Implementation of RxJS</li>
+							<li>Consuming big internal and external API's</li>
+							<li>Authentication with JSON Web Tokens</li>
+							<li>Implementing a complex design for all devices</li>
+							<li>DevOps with Codeship & AWS</li>
+						</ul>
+					</div>
+					<img class="app-mockup-tablet show-tablet mt-med" src="./resources/EBP-mockup.png" alt="Employee Benefit Program Mock-up">
 				</div>
 			</div>
 
@@ -141,43 +153,48 @@
 			<div class="grid-row mt-big">
 				<div>
 					<h2>Case Studie 2</h2>
+					<img class="app-mockup hide-tablet" src="./resources/CNM-mockup.png" alt="Code and Motion Mock-up">
 				</div>
 				<div class="item-list">
 					<div class="item">
 						<div class="item-right">
 							<h3>Code and Motion</h3>
+							<p class="alt-txt show-mob mt-xsml">Design and development</p>
 							<p class="mt-xsml">Sideproject</p>
-							<p class="mt-sml">
-								YouTube is the source of why I am where I am today. 
-								Next to that I love teaching people new skills, 
-								so I created a YouTube channel: Code and Motion. 
-								To test my design, marketing, SEO and web development 
-								skills I also created a blog. The main topics are animation 
-								for the web and scripting for the Adobe suite.<br>
-								<br>
-								For the design I wanted to create something very different that
-								will stick with the visitors. The motion design I created
-								in after effects before replecating it in code to hone
-								in my process. First creating the animation in After
-								Effects creates a polished animation because the motion is carefully designed.
-							</p>
-
-							<a class="mt-sml">Code Base</a>
-							<a class="mt-xsml">Code and Motion</a>
-							
-							<h3 class="mt-med">Highlights</h3>
-							<ul class="mt-xsml">
-								<li>Angular with Scully (JAMstack)</li>
-								<li>Designed in Figma</li>
-								<li>Motion Design in After Effects</li>
-								<li>Ranks well on Google</li>
-								<li>DevOps with Netlify</li>
-							</ul>
 						</div>
 						<div class="item-left">
 							<p class="alt-txt mt-xsml">Design and development</p>
 						</div>
 					</div>
+					<div>
+						<p class="mt-sml">
+							YouTube is the source of why I am where I am today. 
+							Next to that I love teaching people new skills, 
+							so I created a YouTube channel: Code and Motion. 
+							To test my design, marketing, SEO and web development 
+							skills I also created a blog. The main topics are animation 
+							for the web and scripting for the Adobe suite.<br>
+							<br>
+							For the design I wanted to create something very different that
+							will stick with the visitors. The motion design I created
+							in after effects before replecating it in code to hone
+							in my process. First creating the animation in After
+							Effects creates a polished animation because the motion is carefully designed.
+						</p>
+
+						<a class="mt-sml">Code Base</a>
+						<a class="mt-xsml">Code and Motion</a>
+						
+						<h3 class="mt-med">Highlights</h3>
+						<ul class="mt-xsml">
+							<li>Angular with Scully (JAMstack)</li>
+							<li>Designed in Figma</li>
+							<li>Motion Design in After Effects</li>
+							<li>Ranks well on Google</li>
+							<li>DevOps with Netlify</li>
+						</ul>
+					</div>
+					<img class="app-mockup-tablet show-tablet mt-med" src="./resources/CNM-mockup.png" alt="Code and Motion Mock-up">
 				</div>
 			</div>
 
@@ -254,6 +271,7 @@
 					<div class="item">
 						<div class="item-right">
 							<h3>Freecasting</h3>
+							<p class="alt-txt show-mob mt-xsml">Front-end development</p>
 							<p class="mt-xsml">Full redesign, except the blog</p>
 						</div>
 						<div class="item-left">
@@ -263,6 +281,7 @@
 					<div class="item mt-med">
 						<div class="item-right">
 							<h3>Centric</h3>
+							<p class="alt-txt show-mob mt-xsml">Fullstack development</p>
 							<p class="mt-xsml">Graveyard agenda for planning funerals</p>
 						</div>
 						<div class="item-left">
@@ -272,6 +291,7 @@
 					<div class="item mt-med">
 						<div class="item-right">
 							<h3>PSA Private Lease</h3>
+							<p class="alt-txt show-mob mt-xsml">Front-end development</p>
 							<p class="mt-xsml">Built electric car calculator and worked on the configurator</p>
 						</div>
 						<div class="item-left">
@@ -281,6 +301,7 @@
 					<div class="item mt-med">
 						<div class="item-right">
 							<h3>Detailresult</h3>
+							<p class="alt-txt show-mob mt-xsml">Design</p>
 							<p class="mt-xsml">Created instagram content and banners for Dirk en DekaMarkt</p>
 						</div>
 						<div class="item-left">
@@ -290,6 +311,7 @@
 					<div class="item mt-med">
 						<div class="item-right">
 							<h3>Centric</h3>
+							<p class="alt-txt show-mob mt-xsml">Motion design</p>
 							<p class="mt-xsml">Infographic video explaining a new module</p>
 						</div>
 						<div class="item-left">
