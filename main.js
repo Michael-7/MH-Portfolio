@@ -1,23 +1,36 @@
-// function scrollTo() {
-	// document.body.scrollTop = 1000;
-// };
 
-// scrollTo();
+// Load functions
+scrollListener();
+loadAnimations();
 
-var animation = bodymovin.loadAnimation({
-	container: document.getElementById('lottie-1'), // Required
-	path: './resources/char-jump-coffee.json', // Required
-	renderer: 'svg', // Required
-	loop: false, // Optional
-	autoplay: true, // Optional
-	name: "Hello World", // Name for future reference. Optional.
-});
+function scrollListener() {
+	el = document.getElementById('scroll-down-arrow');
+	el.addEventListener('click', () => {
+		console.log(document.getElementById('scroll-target'));
+		document.getElementById('scroll-target').scrollIntoView({behavior: 'smooth'});
+	});
+};
 
-var animation = bodymovin.loadAnimation({
-	container: document.getElementById('lottie-mob'), // Required
-	path: './resources/char-jump-coffee.json', // Required
-	renderer: 'svg', // Required
-	loop: false, // Optional
-	autoplay: true, // Optional
-	name: "Hello World", // Name for future reference. Optional.
-});
+function loadAnimations() {
+	var charAnimationDesktop = bodymovin.loadAnimation({
+		container: document.getElementById('lottie-char'), // Required
+		path: './resources/char-jump-coffee.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: false, // Optional
+	});
+
+	setTimeout(function(){ 
+		document.getElementById('loading-overlay').style.display = 'none';
+		charAnimationDesktop.play();
+	}, 2000);
+	
+
+	var charAnimationMobile = bodymovin.loadAnimation({
+		container: document.getElementById('lottie-mob'), // Required
+		path: './resources/char-jump-coffee.json', // Required
+		renderer: 'svg', // Required
+		loop: false, // Optional
+		autoplay: true, // Optional
+	});
+}

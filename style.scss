@@ -1,39 +1,39 @@
 $background-color: #FDFDFD;
 $text-color: #2C3E50;
 $accent-color: #364CEA;
- 
+
 $primary-font: 'Source Sans Pro', sans-serif;
 $secondary-font: 'Inconsolata', monospace;
 
-html{
+html {
 	@media only screen and (max-width: 768px) {
 		font-size: 11px;
 	}
 }
 
-.portfolio-body{
+.portfolio-body {
 
-	body{
+	body {
 		background-color: $background-color;
 	}
 
-	h3,p,li,a{
+	h3, p, li, a {
 		line-height: 1.5;
 	}
-	
+
 	// TEXT
-	h1{
+	h1 {
 		font-family: $primary-font;
 		color: $text-color;
 		font-size: 3rem;
 		font-weight: 400;
 
-		&.bold, .bold{
+		&.bold, .bold {
 			font-weight: 700;
 		}
 	}
 
-	h2{
+	h2 {
 		font-family: $primary-font;
 		color: $accent-color;
 		font-size: 1.5rem;
@@ -47,116 +47,132 @@ html{
 		}
 	}
 
-	h3{
+	h3 {
 		font-family: $primary-font;
 		color: $text-color;
 		font-size: 1rem;
 		font-weight: 700;
 	}
 
-	p{
+	p {
 		font-family: $primary-font;
 		color: $text-color;
 		font-size: 1rem;
 		font-weight: 400;
 
-		&.alt-txt{
+		&.alt-txt {
 			font-family: $secondary-font;
 		}
 	}
 
-	a{
+	a {
 		display: block;
+		width: fit-content;
 		font-family: $primary-font;
 		color: $accent-color;
 		font-size: 1rem;
 		font-weight: 400;
 		border-bottom: 1px solid $background-color;
 
-		&:hover{
+		&:hover {
 			border-bottom: 1px solid $accent-color;
 			cursor: pointer;
 		}
 
-		&:after{
-			content: '-';
-			padding-left: 10px;
+		&:after {
+			content: '';
+			width: 1px;
+			height: 1px;
+			padding: 2px;
+			margin: 1px;
+			margin-left: 5px;
+			border-style: solid;
+			border-color: $accent-color;
+			border-width: 0 1px 1px 0;
+			cursor: pointer;
+			display: inline-block;
+			transform: rotate(315deg);
+			-webkit-transform: rotate(315deg);
 		}
 	}
 
-	ul{
-		li{
+	ul {
+		li {
 			font-family: $primary-font;
 			color: $text-color;
 			font-size: 1rem;
 			font-weight: 400;
 
-			&:before{
+			&:before {
 				content: '-';
 				padding-right: 10px;
 			}
 		}
 	}
-	
-	.accent{
+
+	.accent {
 		color: $accent-color;
 	}
 
 	// SPACING
 
-	.mt-big{
+	.mt-big {
 		margin-top: 70px !important;
 	}
 
-	.mt-med{
+	.mt-med {
 		margin-top: 50px !important;
 	}
 
-	.mt-sml{
+	.mt-sml {
 		margin-top: 20px !important;
 	}
 
-	.mt-xsml{
+	.mt-xsml {
 		margin-top: 3px !important;
+	}
+
+	.mb-big {
+		margin-bottom: 70px !important;
 	}
 
 	// LAYOUT
 
-	.show-mob{
+	.show-mob {
 		display: none;
 	}
 
-	.show-tablet{
+	.show-tablet {
 		display: none;
 	}
 
 	@media only screen and (max-width: 500px) {
-		.show-mob{
+		.show-mob {
 			display: block;
 		}
 
-		.hide-mob{
+		.hide-mob {
 			display: none;
 		}
 	}
 
 	@media only screen and (max-width: 768px) {
-		.show-tablet{
+		.show-tablet {
 			display: block;
 		}
 
-		.hide-tablet{
+		.hide-tablet {
 			display: none;
 		}
 	}
 
-	.page-container{
+	.page-container {
 		width: 100%;
 		height: 100vh;
 		position: relative;
 		overflow-x: hidden;
 
-		.col{
+		.col {
 			width: 1000px;
 			margin: 0px auto 0px auto;
 
@@ -164,15 +180,45 @@ html{
 				width: 100vw
 			}
 
-			.grid{
+			.grid {
 				display: grid;
 				height: 100vh;
 			}
 		}
 	}
 
+	// LOAGING CSS
+	#loading-overlay {
+		width: 100%;
+		height: 100vh;
+		position: fixed;
+		top: 0;
+		left: 0;
+		background-color: white;
+		z-index: 1;
+		display: grid;
+		grid-template-columns: 1fr;
+		justify-items: center;
+		align-items: center;
+		animation-name: loading;
+		animation-delay: 1s;
+		animation-duration: 1s;
+		animation-timing-function: ease-in;
+		animation-fill-mode: forwards;
+	}
+
+	@keyframes loading {
+		0% {
+			opacity: 1;
+		}
+
+		100% {
+			opacity: 0;
+		}
+	}
+
 	// LANDING CSS
-	.landing-grid{
+	.landing-grid {
 		grid-template-columns: 1fr;
 		grid-template-rows: 1fr .6fr;
 		max-width: 100vw;
@@ -180,23 +226,60 @@ html{
 		@media only screen and (max-width: 500px) {
 			grid-template-rows: initial;
 		}
-		
-		#lottie-1{
+
+		#lottie-char {
 			position: absolute;
 			top: -150px;
 			right: -725px;
 			width: 1450px;
-			transform: scaleX(-1)
+			transform: scaleX(-1);
+			z-index: -1;
+
+			@media only screen and (min-height: 900px) {
+				top: -5%;
+			}
+
+			// Tablets
+			@media only screen and (max-width: 768px) {
+				transform: scaleX(-1);
+				bottom: 0;
+				left: 0;
+			}
+
+			// Keep character close to text on big screens
+			@media only screen and (max-width: 1200px) {
+				right: -60%;
+			}
+
+			@media only screen and (min-width: 1200px) {
+				right: -60%;
+			}
+
+			@media only screen and (min-width: 1350px) {
+				right: -50%;
+			}
+
+			@media only screen and (min-width: 1500px) {
+				right: -40%;
+			}
+
+			@media only screen and (min-width: 1800px) {
+				right: -30%;
+			}
+
+			@media only screen and (min-width: 2100px) {
+				right: -20%;
+			}
 		}
 
-		#lottie-mob{
+		#lottie-mob {
 			position: relative;
 			width: 275vw;
 			margin: -35vw 0 0 -38vw;
 			transform: scaleX(-1);
 		}
 
-		h1{
+		h1 {
 			@media only screen and (max-width: 500px) {
 				max-width: calc(100vw - 80px);
 				margin-top: -10vw;
@@ -209,47 +292,38 @@ html{
 		}
 	}
 
-	.landing-txt{
+	.landing-txt {
 		align-self: end;
 		margin-left: 70px;
 	}
 
-	// .grad-circle-landing{
-	// 	width: 1000px;
-	// 	height: 1000px;
-	// 	border-radius: 500px;
-	// 	position: absolute;
-	// 	right: -600px;
-	// 	top: -600px;
-	// 	background: radial-gradient(68.27% 68.27% at 6.12% 36.5%, #C9F5FF 0%, rgba(227, 250, 255, 0) 100%);
-	// }
-
-	.arrow-wrapper{
+	.arrow-wrapper {
 		justify-self: center;
 		align-self: end;
 		width: 40px;
 		height: 40px;
 		margin-bottom: 20px;
+		cursor: pointer;
 
-		&:hover{
-			.arrow{
-				&:before{
+		&:hover {
+			.arrow {
+				&:before {
 					transform: rotate(45deg);
 					margin-top: 30px;
 				}
-	
-				&:after{
+
+				&:after {
 					transform: rotate(-45deg);
 					margin-top: 30px;
 				}
 			}
 		}
 
-		.arrow{
+		.arrow {
 			display: block;
 			position: relative;
 
-			&:before,&:after{
+			&:before, &:after {
 				position: absolute;
 				left: 50%;
 				top: 50%;
@@ -258,16 +332,16 @@ html{
 				background-color: $text-color;
 				border-radius: 1px;
 				margin-top: 20px;
-				transition: transform .8s cubic-bezier(.78,0,.22,1), margin-top .8s ease-in-out;
+				transition: transform .8s cubic-bezier(.78, 0, .22, 1), margin-top .8s ease-in-out;
 			}
 
-			&:before{
+			&:before {
 				content: '';
 				margin-left: -12px;
 				transform: rotate(-135deg);
 			}
 
-			&:after{
+			&:after {
 				content: '';
 				margin-left: -2px;
 				transform: rotate(135deg);
@@ -276,13 +350,13 @@ html{
 	}
 
 	// PORTFOLIO BODY
-	.portfolio-container{
+	.portfolio-container {
 		width: 100%;
 		height: 100%;
 		position: relative;
 		overflow: hidden;
 
-		.col{
+		.col {
 			width: 1000px;
 			margin: 0px auto 0px auto;
 
@@ -290,7 +364,7 @@ html{
 				width: 100vw
 			}
 
-			.grid-row{
+			.grid-row {
 				display: grid;
 				grid-template-columns: 1fr 2fr;
 				grid-column-gap: 50px;
@@ -306,7 +380,7 @@ html{
 					grid-column-gap: 50px;
 				}
 
-				.item-list{
+				.item-list {
 					display: flex;
 					flex-direction: column;
 					margin-top: 4px;
@@ -315,27 +389,33 @@ html{
 						margin-left: 60px;
 					}
 
-					.item{
+					.item {
 						display: flex;
 						flex-direction: row;
 						justify-content: space-between;
 
-						.item-right{
+						.item-right {
 							max-width: 65%;
+
 							@media only screen and (max-width: 500px) {
 								max-width: 100%;
 							}
 						}
 
-						.item-left{
+						.item-left {
 							@media only screen and (max-width: 500px) {
 								display: none;
 							}
 						}
 					}
+
+					.link-col {
+						display: flex;
+						flex-direction: column;
+					}
 				}
 
-				.toolkit-col{
+				.toolkit-col {
 					display: grid;
 					grid-template-columns: 1fr 1fr 2fr;
 					grid-column-gap: 10px;
@@ -344,16 +424,16 @@ html{
 						margin-left: 60px;
 					}
 
-					.tools-col{
+					.tools-col {
 						margin-left: 10px;
 					}
 
-					h3{
+					h3 {
 						text-transform: uppercase;
 					}
 				}
 
-				.app-mockup{
+				.app-mockup {
 					position: absolute;
 					margin-top: 70px;
 					width: 45%;
@@ -370,7 +450,7 @@ html{
 					}
 				}
 
-				.app-mockup-tablet{
+				.app-mockup-tablet {
 					width: 170%;
 					margin-left: -45%;
 					margin-bottom: -70px;
@@ -379,7 +459,7 @@ html{
 		}
 	}
 
-	.pc-screen{
+	.pc-screen {
 		margin-top: 100px;
 		width: 350px;
 		border-radius: 10px;
@@ -387,5 +467,3 @@ html{
 	}
 
 }
-
-
