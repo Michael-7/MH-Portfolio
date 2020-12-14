@@ -251,8 +251,8 @@ html {
 		transform: rotate(28deg) skew(-25deg);
 
 		h1 {
-			margin: -17px;
-			animation-name: loading-txt;
+			margin: -1.1rem;
+			// animation-name: loading-txt;
 			animation-duration: 2s;
 			animation-timing-function: $hard-bezier;
 			animation-iteration-count: infinite;
