@@ -259,6 +259,8 @@
 
 .portfolio-body #loader h1 {
   margin: -1.1rem;
+  -webkit-animation-name: loading-txt;
+          animation-name: loading-txt;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-timing-function: cubic-bezier(0.8, 0, 0.2, 1);
