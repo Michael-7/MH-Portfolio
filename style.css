@@ -265,7 +265,7 @@
 }
 
 .portfolio-body #loader h1 {
-  margin: -0.8rem;
+  margin: -1.1rem;
   -webkit-animation-name: loading-txt;
           animation-name: loading-txt;
   -webkit-animation-duration: 2s;
@@ -276,6 +276,12 @@
           animation-iteration-count: infinite;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
+}
+
+@media only screen and (max-width: 768px) {
+  .portfolio-body #loader h1 {
+    margin: -0.8rem;
+  }
 }
 
 .portfolio-body #loader :nth-child(1) {
