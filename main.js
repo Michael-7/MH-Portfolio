@@ -41,6 +41,7 @@ function loadAnimations() {
 	}, 2000);
 	
 	charAnimationDesktop.addEventListener('DOMLoaded', () => {
+		charAnimationDesktop.pause();
 		if(fll){
 			loadingOverlay.classList.add('animate');
 		} else {
