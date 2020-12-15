@@ -38,16 +38,16 @@ function loadAnimations() {
 
 	setTimeout(function(){
 		 fll = true; 
-	}, 2000);
+	}, 1500);
 	
 	charAnimationDesktop.addEventListener('DOMLoaded', () => {
-		charAnimationDesktop.pause();
+		charAnimationDesktop.stop();
 		if(fll){
 			loadingOverlay.classList.add('animate');
 		} else {
 			setTimeout(function(){
 				loadingOverlay.classList.add('animate');
-			}, 1500);
+			}, 1000);
 		}
 	});
 
