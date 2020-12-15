@@ -12,7 +12,7 @@ function scrollListener() {
 };
 
 function loadAnimations() {
-	let loadingOverlay = document.getElementById('loading-overlay');
+
 	var charAnimationDesktop = bodymovin.loadAnimation({
 		container: document.getElementById('lottie-char'), // Required
 		path: './resources/char-jump-coffee.json', // Required
@@ -21,20 +21,37 @@ function loadAnimations() {
 		autoplay: false, // Optional
 	});
 
-	charAnimationDesktop.addEventListener('DOMLoaded', () => {
-		loadingOverlay.classList.add('animate');
-	});
-
-	loadingOverlay.addEventListener('animationend', () => {
-		charAnimationDesktop.play();
-		document.getElementById('loading-overlay').style.display = 'none';
-	});
-
 	var charAnimationMobile = bodymovin.loadAnimation({
 		container: document.getElementById('lottie-mob'), // Required
 		path: './resources/char-jump-coffee.json', // Required
 		renderer: 'svg', // Required
 		loop: false, // Optional
 		autoplay: true, // Optional
+	});
+
+	const loadingOverlay = document.getElementById('loading-overlay');
+	const fistLoadLine = document.getElementById('fist-load-line');
+
+	console.log(fistLoadLine);
+
+	let fll = false;
+
+	setTimeout(function(){
+		 fll = true; 
+	}, 2000);
+	
+	charAnimationDesktop.addEventListener('DOMLoaded', () => {
+		if(fll){
+			loadingOverlay.classList.add('animate');
+		} else {
+			setTimeout(function(){
+				loadingOverlay.classList.add('animate');
+			}, 1500);
+		}
+	});
+
+	loadingOverlay.addEventListener('animationend', () => {
+		charAnimationDesktop.play();
+		document.getElementById('loading-overlay').style.display = 'none';
 	});
 }

@@ -323,7 +323,7 @@
 
 @-webkit-keyframes loading-txt {
   0% {
-    opacity: .05;
+    opacity: .1;
     -webkit-transform: translateX(-10px) translateY(-10px);
             transform: translateX(-10px) translateY(-10px);
   }
@@ -336,7 +336,7 @@
 
 @keyframes loading-txt {
   0% {
-    opacity: .05;
+    opacity: .1;
     -webkit-transform: translateX(-10px) translateY(-10px);
             transform: translateX(-10px) translateY(-10px);
   }
