@@ -179,6 +179,10 @@ html {
 		margin-bottom: 70px !important;
 	}
 
+	.mt-links {
+		margin-top: 70px;
+	}
+
 	// LAYOUT
 
 	.show-mob {
@@ -578,15 +582,16 @@ html {
 					margin-left: -45%;
 					margin-bottom: -70px;
 				}
+
+				.contact-icons {
+					max-width: 40px;
+					margin-left: auto;
+
+					img {
+						width: 100%
+					}
+				}
 			}
 		}
 	}
-
-	.pc-screen {
-		margin-top: 100px;
-		width: 350px;
-		border-radius: 10px;
-		transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
-	}
-
 }

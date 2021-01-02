@@ -173,6 +173,10 @@
   margin-bottom: 70px !important;
 }
 
+.portfolio-body .mt-links {
+  margin-top: 70px;
+}
+
 .portfolio-body .show-mob {
   display: none;
 }
@@ -694,11 +698,12 @@
   margin-bottom: -70px;
 }
 
-.portfolio-body .pc-screen {
-  margin-top: 100px;
-  width: 350px;
-  border-radius: 10px;
-  -webkit-transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
-          transform: rotateX(60deg) rotateY(0deg) rotateZ(-45deg);
+.portfolio-body .portfolio-container .col .grid-row .contact-icons {
+  max-width: 40px;
+  margin-left: auto;
+}
+
+.portfolio-body .portfolio-container .col .grid-row .contact-icons img {
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
